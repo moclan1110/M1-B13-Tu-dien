@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+    Nhập từ:
+    <input type="text" name="word" id="word"/>
+    <input type="button" value="Dịch" onclick="trans()"/>
+    <p id="result"></p>
+    <script>
+        function trans() {
+            let en = ['apple','banana'];
+            let vn = ['táo','chuối'];
+            let a = document.getElementById('word').value;
+            for(let i = 0; i < en.length; i++) {
+                if(en[i] === a) {
+                    document.getElementById('result').innerHTML = vn[i];
+                    break;
+                }
+                else {
+                    document.getElementById('result').innerHTML = 'Not found';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
